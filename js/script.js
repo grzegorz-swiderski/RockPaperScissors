@@ -21,6 +21,7 @@ var resultsElem = document.getElementById('js-resultsTableElement');
 var helloGame = document.getElementById('js-newGameWords');
 var startImg = document.getElementById('start-img');
 var backImg = document.getElementById('back-img');
+var myFooter = document.getElementById('bottomP');
 
 var playerPointsElem = document.getElementById('js-playerPoints');
 var playerNameElem = document.getElementById('js-playerName');
@@ -42,6 +43,7 @@ setGameElements();
 function setGameElements() {
   switch(gameState) {
     case 'started':
+        myFooter.style.display = 'none';
         helloGame.style.display = 'none';
         newGameElem.style.display = 'none';
         pickElem.style.display = 'block';
@@ -56,6 +58,7 @@ function setGameElements() {
         resultsElem.style.display = 'none';
         helloGame.style.display = 'block';
         backImg.style.display = 'none';
+        myFooter.style.display ='block';
   }
 }
 	
